@@ -12,6 +12,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from "vue";
 import { computed, useTenant } from "#imports";
 import { useFetch, createError } from "#imports";
 import type { Article, Organization } from "~/services/devto/types";
@@ -22,7 +23,10 @@ const tenant = useTenant();
 const { data: tenantInfo, error } = await useFetch<Organization>(
   `https://dev.to/api/organizations/${tenant}`
 );
-
+onMounted(() => {
+  console.log("tenantInfo");
+  console.log(tenantInfo.value);
+});
 const isUserTenant = error.value?.statusCode === 404;
 
 useServerSeoMeta({
