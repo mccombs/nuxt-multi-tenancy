@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  modules: ["nuxt-multi-tenancy"],
   nitro: {
     static: false,
   },
