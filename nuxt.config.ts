@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   modules: ["nuxt-multi-tenancy"],
   nitro: {
+    preset: "vercel-edge",
     static: false,
   },
   app: {
