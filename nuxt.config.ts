@@ -4,6 +4,10 @@ export default defineNuxtConfig({
     preset: "vercel-edge",
     static: false,
   },
+  multiTenancy: {
+    tenantDynamicRoute: "site",
+    tenantKey: "site",
+  },
   app: {
     head: {
       title: "Extending Configs is Fun!",
