@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   },
   multiTenancy: {
     tenantDynamicRoute: "site",
-    tenantKey: "site",
+    rootDomains: ["nuxt.fyi", "localhost:3000"],
+    sites: ["devteam"],
   },
   app: {
     head: {
